@@ -35,9 +35,8 @@
   <description>Author documents that share common traits with IETF's Request for Comments (RFC).</description>
   <url>https://extensions.xwiki.org/xwiki/bin/view/Extension/RFC%20Application</url>
   <properties>
-    <!-- JIRA project of the application (to be created). Automatic JIRA release stays disabled until the project
-         exists. -->
     <xwiki.issueManagement.jira.id>RFC</xwiki.issueManagement.jira.id>
+    <xwiki.release.jira.skip>false</xwiki.release.jira.skip>
     <!-- No Java code in this project: nothing to check with Checkstyle or Revapi -->
     <xwiki.checkstyle.skip>true</xwiki.checkstyle.skip>
     <xwiki.revapi.skip>true</xwiki.revapi.skip>
