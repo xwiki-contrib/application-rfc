@@ -1,0 +1,222 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.6" reference="RFC.Code.RFCTranslations" locale="">
+  <web>RFC.Code</web>
+  <name>RFCTranslations</name>
+  <language/>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>RFC.Code.RFCClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <enforceRequiredRights>true</enforceRequiredRights>
+  <content># Class fields
+RFC.Code.RFCClass_rfcTitle=Title
+RFC.Code.RFCClass_number=Number
+RFC.Code.RFCClass_category=Category
+RFC.Code.RFCClass_category_informational=Informational
+RFC.Code.RFCClass_category_experimental=Experimental
+RFC.Code.RFCClass_category_bcp=Best current practice
+RFC.Code.RFCClass_status=Status
+RFC.Code.RFCClass_status_draft=Draft
+RFC.Code.RFCClass_status_proposed=Proposed
+RFC.Code.RFCClass_status_final=Final
+RFC.Code.RFCClass_status_rejected=Rejected
+RFC.Code.RFCClass_abstract=Abstract
+RFC.Code.RFCClass_content=Content
+RFC.Code.RFCClass_obsoletes=Obsoletes
+RFC.Code.RFCClass_updates=Updates
+RFC.Code.RFCClass_additionalAuthors=Additional authors
+
+# Class field hints (shown in edit mode)
+rfc.class.number.hint=Sequential number of the RFC, proposed automatically when the RFC is created.
+rfc.class.category.hint=Informational describes a practice or a system, experimental proposes a new way of doing things, best current practice describes rules and procedures that are widely adopted.
+rfc.class.status.hint=Draft while the RFC is being written, proposed once it is submitted for comments, final once it is accepted, rejected otherwise.
+rfc.class.abstract.hint=A short plain-text summary of the RFC, shown in the list of RFCs.
+rfc.class.obsoletes.hint=The earlier RFCs that this one replaces.
+rfc.class.updates.hint=The earlier RFCs that this one amends without replacing them.
+rfc.class.additionalAuthors.hint=The authors of the RFC besides the person who created the page.
+
+# Home page
+rfc.home.title=RFCs
+rfc.home.description=A Request for Comments (RFC) is a document that describes a practice, a proposal or a piece of information inside your organization, in the spirit of the IETF publications of the same name.
+rfc.home.create=Create an RFC
+rfc.home.legacyDataWarning=Pages created with version 1.x of the RFC application were found. They must be migrated before they appear in the list below.
+rfc.home.legacyDataLink=Open the migration page
+rfc.home.filters.label=Show
+rfc.home.filters.all=All RFCs
+rfc.home.filters.draft=Drafts
+rfc.home.filters.proposed=Proposed
+rfc.home.filters.final=Final
+rfc.home.filters.mine=Mine
+
+# Live Data columns
+rfc.livetable.number=Number
+rfc.livetable.doc.title=Title
+rfc.livetable.doc.creator=Author
+rfc.livetable.doc.date=Last update
+rfc.livetable.category=Category
+rfc.livetable.status=Status
+rfc.livetable.abstract=Abstract
+rfc.livetable.obsoletes=Obsoletes
+rfc.livetable.updates=Updates
+rfc.livetable._actions=Actions
+rfc.livetable._actions.edit=Edit
+rfc.livetable._actions.delete=Delete
+rfc.livetable.emptyvalue=-
+
+# Sheet
+rfc.sheet.description=This sheet displays and edits the pages that hold an RFC object.
+rfc.sheet.noObject=This page has no RFC object, so the RFC sheet cannot display it.
+rfc.sheet.author=Author
+rfc.sheet.obsoletedBy=Obsoleted by
+rfc.sheet.obsoletedWarning=This RFC has been obsoleted by:
+rfc.sheet.updatedBy=Updated by
+rfc.sheet.updatedInfo=This RFC has been updated by:
+rfc.sheet.duplicateNumberWarning=Another RFC has the same number:
+rfc.sheet.linkLabel=RFC {0,number,#}: {1}
+rfc.sheet.discussion=Discussion
+rfc.sheet.comments={0,choice,0#No comments yet|1#1 comment|1&lt;{0} comments}
+
+# Template provider
+rfc.templateProvider.name=RFC
+rfc.templateProvider.description=A Request for Comments: numbered, with a category, a status, an abstract and a content, which can obsolete or update earlier RFCs.
+
+# Code space
+rfc.code.title=Code
+rfc.code.description=This page holds the technical pages of the RFC application: the class, the sheet, the template and its provider, the translations and the migration tool. Edit them only if you know what you are doing.
+
+# Applications panel
+rfc.panel.label=RFCs
+
+# Migration from version 1.x
+rfc.migration.title=RFC data migration
+rfc.migration.description=Version 1.x of the RFC application stored its data in objects of the RFCCode.RFCClass class. Version 2.0 uses the RFC.Code.RFCClass class. This page converts the existing pages, numbers the RFCs that have no number and removes the pages of version 1.x that are no longer needed. Every step can be run again safely.
+rfc.migration.accessDenied=Only wiki administrators can run the migration.
+rfc.migration.invalidToken=The request was not accepted (invalid form token). Please try again.
+rfc.migration.pages.heading=Pages to migrate
+rfc.migration.pages.none=No page uses the class of version 1.x. There is nothing to migrate.
+rfc.migration.pages.migrate=Migrate the objects of these pages
+rfc.migration.migrated={0} page(s) were migrated.
+rfc.migration.failed=The following pages could not be migrated:
+rfc.migration.failed.rightsHint=A page that declares required rights above "script" cannot be saved from this page. Migrate or number it by hand, or lower its declared rights first.
+rfc.migration.reason.notEditable=you are not allowed to edit it
+rfc.migration.reason.alreadyMigrated=it already holds an object of the new class
+rfc.migration.reason.notDeletable=you are not allowed to delete it
+rfc.migration.saveComment=Migrated to version 2.0 of the RFC application
+rfc.migration.numbering.heading=RFCs without a number
+rfc.migration.numbering.none=Every RFC has a number.
+rfc.migration.numbering.assign=Number these RFCs, oldest first
+rfc.migration.numbered={0} RFC(s) were numbered.
+rfc.migration.numbering.failed=The following RFCs could not be numbered:
+rfc.migration.numberingComment=RFC number assigned by the migration page
+rfc.migration.cleanup.heading=Pages of version 1.x to remove
+rfc.migration.cleanup.none=No page of version 1.x remains. There is nothing to remove.
+rfc.migration.cleanup.pending=Remove these pages only once every page listed above has been migrated.
+rfc.migration.cleanup.samplePage=Also delete the sample RFC page shipped with version 1.x
+rfc.migration.cleanup.remove=Remove the pages of version 1.x
+rfc.migration.cleanedUp=The pages of version 1.x were removed.
+rfc.migration.cleanup.failed=The following pages could not be removed:
+rfc.migration.rename.hint=Pages created with version 1.x keep their timestamp-based names. You can rename them from their page menu if you want title-based names.</content>
+  <object>
+    <name>RFC.Code.RFCTranslations</name>
+    <number>0</number>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>cd645cd2-e0ce-40d5-8467-e4e66076fb74</guid>
+    <class>
+      <name>XWiki.TranslationDocumentClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>1</number>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <property>
+      <scope>WIKI</scope>
+    </property>
+  </object>
+  <object>
+    <name>RFC.Code.RFCTranslations</name>
+    <number>0</number>
+    <className>XWiki.RequiredRightClass</className>
+    <guid>3c2e8d5f-9a4b-4d7c-8f1e-6b8a2d4c3e03</guid>
+    <class>
+      <name>XWiki.RequiredRightClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <level>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>level</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Level</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>edit|script|wiki_admin|programming</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </level>
+    </class>
+    <property>
+      <level>wiki_admin</level>
+    </property>
+  </object>
+</xwikidoc>

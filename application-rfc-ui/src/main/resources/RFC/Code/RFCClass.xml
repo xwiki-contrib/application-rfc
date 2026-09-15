@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
+
 <!--
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.
@@ -19,30 +20,26 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 -->
 
-<xwikidoc>
-  <web>RFCCode</web>
+<xwikidoc version="1.6" reference="RFC.Code.RFCClass" locale="">
+  <web>RFC.Code</web>
   <name>RFCClass</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>RFC.WebHome</parent>
   <creator>xwiki:XWiki.Admin</creator>
+  <parent>RFC.Code.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
-  <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <creationDate>1424725935000</creationDate>
-  <date>1424819243000</date>
-  <contentUpdateDate>1424819243000</contentUpdateDate>
   <version>1.1</version>
   <title>RFC Class</title>
-  <defaultTemplate/>
-  <validationScript/>
   <comment/>
   <minorEdit>false</minorEdit>
-  <syntaxId>xwiki/2.0</syntaxId>
+  <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
+  <enforceRequiredRights>true</enforceRequiredRights>
+  <content/>
   <class>
-    <name>RFCCode.RFCClass</name>
+    <name>RFC.Code.RFCClass</name>
     <customClass/>
     <customMapping/>
     <defaultViewSheet/>
@@ -51,13 +48,16 @@
     <nameField/>
     <validationScript/>
     <abstract>
+      <contenttype>PureText</contenttype>
       <customDisplay/>
       <disabled>0</disabled>
       <editor>PureText</editor>
+      <hint>rfc.class.abstract.hint</hint>
       <name>abstract</name>
-      <number>4</number>
+      <number>5</number>
       <picker>0</picker>
       <prettyName>Abstract</prettyName>
+      <restricted>0</restricted>
       <rows>5</rows>
       <size>40</size>
       <unmodifiable>0</unmodifiable>
@@ -69,15 +69,16 @@
       <cache>0</cache>
       <customDisplay/>
       <disabled>0</disabled>
-      <displayType>select</displayType>
+      <displayType>input</displayType>
+      <hint>rfc.class.additionalAuthors.hint</hint>
       <multiSelect>1</multiSelect>
       <name>additionalAuthors</name>
-      <number>7</number>
-      <picker>0</picker>
-      <prettyName>Additional Authors</prettyName>
+      <number>9</number>
+      <picker>1</picker>
+      <prettyName>Additional authors</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators/>
+      <separators>|,</separators>
       <size>6</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
@@ -89,16 +90,20 @@
     <category>
       <cache>0</cache>
       <customDisplay/>
+      <defaultValue>informational</defaultValue>
       <disabled>0</disabled>
       <displayType>select</displayType>
+      <freeText>forbidden</freeText>
+      <hint>rfc.class.category.hint</hint>
+      <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>category</name>
-      <number>2</number>
+      <number>3</number>
       <picker>0</picker>
       <prettyName>Category</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators> ,|</separators>
+      <separators>|,</separators>
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
@@ -110,8 +115,9 @@
     <content>
       <customDisplay>{{include reference="AppWithinMinutes.Content"/}}</customDisplay>
       <disabled>0</disabled>
+      <hint/>
       <name>content</name>
-      <number>5</number>
+      <number>6</number>
       <prettyName>Content</prettyName>
       <script/>
       <unmodifiable>0</unmodifiable>
@@ -119,56 +125,74 @@
       <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
     </content>
+    <number>
+      <customDisplay/>
+      <disabled>0</disabled>
+      <hint>rfc.class.number.hint</hint>
+      <name>number</name>
+      <number>2</number>
+      <numberType>integer</numberType>
+      <prettyName>Number</prettyName>
+      <size>10</size>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
+    </number>
     <obsoletes>
       <cache>0</cache>
-      <classname/>
-      <customDisplay>{{velocity}}
-#set($propertyClass = $object.getxWikiClass().get($name))
-#if ($type == 'edit')
-  #set($selectName = "${prefix}${name}")
-  {{html clean="false" wiki="false"}}
-    &lt;select name="$selectName"&gt;
-    #if($!value == "")
-      &lt;option value="" selected="selected"&gt;None&lt;/option&gt;
-    #else
-      &lt;option value=""&gt;None&lt;/option&gt;
-    #end
-    #foreach($listItem in $propertyClass.getMapValues())
-      #set($checked = "")
-      #if($value == $listItem.id)
-        #set($checked = 'selected="selected"')
-      #end
-      &lt;option value="$listItem.id" $checked&gt;$listItem.value ($listItem.id)&lt;/option&gt;
-    #end
-    &lt;/select&gt;
-  {{/html}}
-#else
-  $doc.displayView($propertyClass, $prefix, $object)
-#end
-{{/velocity}}</customDisplay>
+      <classname>RFC.Code.RFCClass</classname>
+      <customDisplay/>
       <disabled>0</disabled>
-      <displayType>select</displayType>
+      <displayType>input</displayType>
+      <hint>rfc.class.obsoletes.hint</hint>
       <idField/>
-      <multiSelect>0</multiSelect>
+      <multiSelect>1</multiSelect>
       <name>obsoletes</name>
-      <number>6</number>
-      <picker>0</picker>
+      <number>7</number>
+      <picker>1</picker>
       <prettyName>Obsoletes</prettyName>
       <relationalStorage>1</relationalStorage>
       <separator> </separator>
-      <separators/>
+      <separators>|,</separators>
       <size>1</size>
       <sort>none</sort>
-      <sql>SELECT doc.fullName, doc.title FROM XWikiDocument doc, BaseObject obj WHERE doc.fullName = obj.name AND obj.className = 'RFCCode.RFCClass' AND doc.space = 'RFC'</sql>
+      <sql/>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
       <valueField/>
-      <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
+      <classType>com.xpn.xwiki.objects.classes.PageClass</classType>
     </obsoletes>
+    <updates>
+      <cache>0</cache>
+      <classname>RFC.Code.RFCClass</classname>
+      <customDisplay/>
+      <disabled>0</disabled>
+      <displayType>input</displayType>
+      <hint>rfc.class.updates.hint</hint>
+      <idField/>
+      <multiSelect>1</multiSelect>
+      <name>updates</name>
+      <number>8</number>
+      <picker>1</picker>
+      <prettyName>Updates</prettyName>
+      <relationalStorage>1</relationalStorage>
+      <separator> </separator>
+      <separators>|,</separators>
+      <size>1</size>
+      <sort>none</sort>
+      <sql/>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
+      <classType>com.xpn.xwiki.objects.classes.PageClass</classType>
+    </updates>
     <rfcTitle>
       <customDisplay>{{include reference="AppWithinMinutes.Title"/}}</customDisplay>
       <disabled>0</disabled>
+      <hint/>
       <name>rfcTitle</name>
       <number>1</number>
       <prettyName>Title</prettyName>
@@ -181,90 +205,34 @@
     <status>
       <cache>0</cache>
       <customDisplay/>
+      <defaultValue>draft</defaultValue>
       <disabled>0</disabled>
       <displayType>select</displayType>
+      <freeText>forbidden</freeText>
+      <hint>rfc.class.status.hint</hint>
+      <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>status</name>
-      <number>3</number>
+      <number>4</number>
       <picker>0</picker>
       <prettyName>Status</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators> ,|</separators>
+      <separators>|,</separators>
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
-      <values>draft=Draft|final=Final</values>
+      <values>draft=Draft|proposed=Proposed|final=Final|rejected=Rejected</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </status>
   </class>
   <object>
-    <class>
-      <name>AppWithinMinutes.MetadataClass</name>
-      <customClass/>
-      <customMapping/>
-      <defaultViewSheet/>
-      <defaultEditSheet/>
-      <defaultWeb/>
-      <nameField/>
-      <validationScript/>
-      <dataSpaceName>
-        <customDisplay/>
-        <disabled>0</disabled>
-        <name>dataSpaceName</name>
-        <number>1</number>
-        <picker>0</picker>
-        <prettyName>Data Space Name</prettyName>
-        <size>30</size>
-        <unmodifiable>0</unmodifiable>
-        <validationMessage/>
-        <validationRegExp/>
-        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
-      </dataSpaceName>
-    </class>
-    <name>RFCCode.RFCClass</name>
-    <number>0</number>
-    <className>AppWithinMinutes.MetadataClass</className>
-    <guid>61e92d54-de09-496a-8dc3-5f312492bac9</guid>
-    <property>
-      <dataSpaceName>RFC</dataSpaceName>
-    </property>
-  </object>
-  <object>
-    <class>
-      <name>XWiki.ClassSheetBinding</name>
-      <customClass/>
-      <customMapping/>
-      <defaultViewSheet/>
-      <defaultEditSheet/>
-      <defaultWeb/>
-      <nameField/>
-      <validationScript/>
-      <sheet>
-        <customDisplay/>
-        <disabled>0</disabled>
-        <name>sheet</name>
-        <number>1</number>
-        <picker>0</picker>
-        <prettyName>Sheet</prettyName>
-        <size>30</size>
-        <unmodifiable>0</unmodifiable>
-        <validationMessage/>
-        <validationRegExp/>
-        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
-      </sheet>
-    </class>
-    <name>RFCCode.RFCClass</name>
+    <name>RFC.Code.RFCClass</name>
     <number>0</number>
     <className>XWiki.ClassSheetBinding</className>
     <guid>be4395b6-31f6-4e6d-8230-7adda6afe3a5</guid>
-    <property>
-      <sheet>RFCEditSheet</sheet>
-    </property>
-  </object>
-  <object>
     <class>
       <name>XWiki.ClassSheetBinding</name>
       <customClass/>
@@ -275,7 +243,6 @@
       <nameField/>
       <validationScript/>
       <sheet>
-        <customDisplay/>
         <disabled>0</disabled>
         <name>sheet</name>
         <number>1</number>
@@ -288,47 +255,15 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>RFCCode.RFCClass</name>
-    <number>1</number>
-    <className>XWiki.ClassSheetBinding</className>
-    <guid>25621ad3-fdba-444c-bdf7-a18a4334f7ea</guid>
     <property>
-      <sheet>RFCViewSheet</sheet>
+      <sheet>RFC.Code.RFCSheet</sheet>
     </property>
   </object>
   <object>
-    <class>
-      <name>XWiki.DocumentSheetBinding</name>
-      <customClass/>
-      <customMapping/>
-      <defaultViewSheet/>
-      <defaultEditSheet/>
-      <defaultWeb/>
-      <nameField/>
-      <validationScript/>
-      <sheet>
-        <customDisplay/>
-        <disabled>0</disabled>
-        <name>sheet</name>
-        <number>1</number>
-        <picker>0</picker>
-        <prettyName>Sheet</prettyName>
-        <size>30</size>
-        <unmodifiable>0</unmodifiable>
-        <validationMessage/>
-        <validationRegExp/>
-        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
-      </sheet>
-    </class>
-    <name>RFCCode.RFCClass</name>
+    <name>RFC.Code.RFCClass</name>
     <number>0</number>
     <className>XWiki.DocumentSheetBinding</className>
-    <guid>c8011094-5f2d-4308-8aaf-a55ab01aada5</guid>
-    <property>
-      <sheet>AppWithinMinutes.ClassEditSheet</sheet>
-    </property>
-  </object>
-  <object>
+    <guid>09875d1a-6a1b-4961-877e-a34e8e4e4717</guid>
     <class>
       <name>XWiki.DocumentSheetBinding</name>
       <customClass/>
@@ -339,7 +274,6 @@
       <nameField/>
       <validationScript/>
       <sheet>
-        <customDisplay/>
         <disabled>0</disabled>
         <name>sheet</name>
         <number>1</number>
@@ -352,13 +286,47 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>RFCCode.RFCClass</name>
-    <number>1</number>
-    <className>XWiki.DocumentSheetBinding</className>
-    <guid>09875d1a-6a1b-4961-877e-a34e8e4e4717</guid>
     <property>
       <sheet>XWiki.ClassSheet</sheet>
     </property>
   </object>
-  <content/>
+  <object>
+    <name>RFC.Code.RFCClass</name>
+    <number>0</number>
+    <className>XWiki.RequiredRightClass</className>
+    <guid>1a0c6a8e-3b1f-4e5c-9d2a-7f4b8c1d2e01</guid>
+    <class>
+      <name>XWiki.RequiredRightClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <level>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>level</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Level</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <values>edit|script|wiki_admin|programming</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </level>
+    </class>
+    <property>
+      <level>script</level>
+    </property>
+  </object>
 </xwikidoc>

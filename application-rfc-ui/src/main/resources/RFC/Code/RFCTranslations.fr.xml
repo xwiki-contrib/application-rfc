@@ -1,0 +1,148 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.6" reference="RFC.Code.RFCTranslations" locale="fr">
+  <web>RFC.Code</web>
+  <name>RFCTranslations</name>
+  <language>fr</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>RFC.Code.RFCClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <enforceRequiredRights>true</enforceRequiredRights>
+  <content># Class fields
+RFC.Code.RFCClass_rfcTitle=Titre
+RFC.Code.RFCClass_number=Numéro
+RFC.Code.RFCClass_category=Catégorie
+RFC.Code.RFCClass_category_informational=Informatif
+RFC.Code.RFCClass_category_experimental=Expérimental
+RFC.Code.RFCClass_category_bcp=Bonne pratique en vigueur
+RFC.Code.RFCClass_status=Statut
+RFC.Code.RFCClass_status_draft=Brouillon
+RFC.Code.RFCClass_status_proposed=Proposé
+RFC.Code.RFCClass_status_final=Final
+RFC.Code.RFCClass_status_rejected=Rejeté
+RFC.Code.RFCClass_abstract=Résumé
+RFC.Code.RFCClass_content=Contenu
+RFC.Code.RFCClass_obsoletes=Rend obsolète
+RFC.Code.RFCClass_updates=Met à jour
+RFC.Code.RFCClass_additionalAuthors=Auteurs supplémentaires
+
+# Class field hints (shown in edit mode)
+rfc.class.number.hint=Numéro séquentiel de la RFC, proposé automatiquement à la création.
+rfc.class.category.hint=Informatif décrit une pratique ou un système, expérimental propose une nouvelle façon de faire, bonne pratique en vigueur décrit des règles et procédures largement adoptées.
+rfc.class.status.hint=Brouillon pendant la rédaction, proposé une fois soumis aux commentaires, final une fois accepté, rejeté sinon.
+rfc.class.abstract.hint=Un court résumé en texte brut de la RFC, affiché dans la liste des RFC.
+rfc.class.obsoletes.hint=Les RFC antérieures que celle-ci remplace.
+rfc.class.updates.hint=Les RFC antérieures que celle-ci amende sans les remplacer.
+rfc.class.additionalAuthors.hint=Les auteurs de la RFC en plus de la personne qui a créé la page.
+
+# Home page
+rfc.home.title=RFC
+rfc.home.description=Une Request for Comments (RFC) est un document qui décrit une pratique, une proposition ou une information au sein de votre organisation, dans l'esprit des publications de l'IETF du même nom.
+rfc.home.create=Créer une RFC
+rfc.home.legacyDataWarning=Des pages créées avec la version 1.x de l'application RFC ont été trouvées. Elles doivent être migrées avant d'apparaître dans la liste ci-dessous.
+rfc.home.legacyDataLink=Ouvrir la page de migration
+rfc.home.filters.label=Afficher
+rfc.home.filters.all=Toutes les RFC
+rfc.home.filters.draft=Brouillons
+rfc.home.filters.proposed=Proposées
+rfc.home.filters.final=Finales
+rfc.home.filters.mine=Les miennes
+
+# Live Data columns
+rfc.livetable.number=Numéro
+rfc.livetable.doc.title=Titre
+rfc.livetable.doc.creator=Auteur
+rfc.livetable.doc.date=Dernière modification
+rfc.livetable.category=Catégorie
+rfc.livetable.status=Statut
+rfc.livetable.abstract=Résumé
+rfc.livetable.obsoletes=Rend obsolète
+rfc.livetable.updates=Met à jour
+rfc.livetable._actions=Actions
+rfc.livetable._actions.edit=Modifier
+rfc.livetable._actions.delete=Supprimer
+rfc.livetable.emptyvalue=-
+
+# Sheet
+rfc.sheet.description=Cette feuille affiche et modifie les pages qui contiennent un objet RFC.
+rfc.sheet.noObject=Cette page ne contient pas d'objet RFC, la feuille RFC ne peut donc pas l'afficher.
+rfc.sheet.author=Auteur
+rfc.sheet.obsoletedBy=Rendue obsolète par
+rfc.sheet.obsoletedWarning=Cette RFC a été rendue obsolète par :
+rfc.sheet.updatedBy=Mise à jour par
+rfc.sheet.updatedInfo=Cette RFC a été mise à jour par :
+rfc.sheet.duplicateNumberWarning=Une autre RFC porte le même numéro :
+rfc.sheet.linkLabel=RFC {0,number,#} : {1}
+rfc.sheet.discussion=Discussion
+rfc.sheet.comments={0,choice,0#Aucun commentaire pour l''instant|1#1 commentaire|1&lt;{0} commentaires}
+
+# Template provider
+rfc.templateProvider.name=RFC
+rfc.templateProvider.description=Une Request for Comments : numérotée, avec une catégorie, un statut, un résumé et un contenu, qui peut rendre obsolètes ou mettre à jour des RFC antérieures.
+
+# Code space
+rfc.code.title=Code
+rfc.code.description=Cette page regroupe les pages techniques de l'application RFC : la classe, la feuille, le modèle et son fournisseur, les traductions et l'outil de migration. Ne les modifiez que si vous savez ce que vous faites.
+
+# Applications panel
+rfc.panel.label=RFC
+
+# Migration from version 1.x
+rfc.migration.title=Migration des données RFC
+rfc.migration.description=La version 1.x de l'application RFC stockait ses données dans des objets de la classe RFCCode.RFCClass. La version 2.0 utilise la classe RFC.Code.RFCClass. Cette page convertit les pages existantes, numérote les RFC qui n'ont pas de numéro et supprime les pages de la version 1.x devenues inutiles. Chaque étape peut être relancée sans risque.
+rfc.migration.accessDenied=Seuls les administrateurs du wiki peuvent lancer la migration.
+rfc.migration.invalidToken=La requête n'a pas été acceptée (jeton de formulaire invalide). Veuillez réessayer.
+rfc.migration.pages.heading=Pages à migrer
+rfc.migration.pages.none=Aucune page n'utilise la classe de la version 1.x. Il n'y a rien à migrer.
+rfc.migration.pages.migrate=Migrer les objets de ces pages
+rfc.migration.migrated={0} page(s) migrée(s).
+rfc.migration.failed=Les pages suivantes n'ont pas pu être migrées :
+rfc.migration.failed.rightsHint=Une page qui déclare des droits requis supérieurs à « script » ne peut pas être enregistrée depuis cette page. Migrez-la ou numérotez-la à la main, ou abaissez d'abord ses droits déclarés.
+rfc.migration.reason.notEditable=vous n'avez pas le droit de la modifier
+rfc.migration.reason.alreadyMigrated=elle contient déjà un objet de la nouvelle classe
+rfc.migration.reason.notDeletable=vous n'avez pas le droit de la supprimer
+rfc.migration.saveComment=Migration vers la version 2.0 de l'application RFC
+rfc.migration.numbering.heading=RFC sans numéro
+rfc.migration.numbering.none=Toutes les RFC ont un numéro.
+rfc.migration.numbering.assign=Numéroter ces RFC, de la plus ancienne à la plus récente
+rfc.migration.numbered={0} RFC numérotée(s).
+rfc.migration.numbering.failed=Les RFC suivantes n'ont pas pu être numérotées :
+rfc.migration.numberingComment=Numéro de RFC attribué par la page de migration
+rfc.migration.cleanup.heading=Pages de la version 1.x à supprimer
+rfc.migration.cleanup.none=Il ne reste aucune page de la version 1.x. Il n'y a rien à supprimer.
+rfc.migration.cleanup.pending=Ne supprimez ces pages qu'une fois toutes les pages listées ci-dessus migrées.
+rfc.migration.cleanup.samplePage=Supprimer aussi la page RFC d'exemple livrée avec la version 1.x
+rfc.migration.cleanup.remove=Supprimer les pages de la version 1.x
+rfc.migration.cleanedUp=Les pages de la version 1.x ont été supprimées.
+rfc.migration.cleanup.failed=Les pages suivantes n'ont pas pu être supprimées :
+rfc.migration.rename.hint=Les pages créées avec la version 1.x gardent leur nom fondé sur un horodatage. Vous pouvez les renommer depuis leur menu si vous préférez des noms fondés sur le titre.</content>
+</xwikidoc>

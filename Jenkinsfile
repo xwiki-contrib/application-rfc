@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+/*
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.
  *
@@ -17,33 +16,14 @@
  * License along with this software; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
--->
+ */
 
-<xwikidoc>
-  <web>RFCCode</web>
-  <name>RFCLiveTableResults</name>
-  <language/>
-  <defaultLanguage/>
-  <translation>0</translation>
-  <parent>WebHome</parent>
-  <creator>xwiki:XWiki.Admin</creator>
-  <author>xwiki:XWiki.Admin</author>
-  <customClass/>
-  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <creationDate>1424726637000</creationDate>
-  <date>1424726637000</date>
-  <contentUpdateDate>1424726637000</contentUpdateDate>
-  <version>1.1</version>
-  <title/>
-  <defaultTemplate/>
-  <validationScript/>
-  <comment/>
-  <minorEdit>false</minorEdit>
-  <syntaxId>xwiki/2.1</syntaxId>
-  <hidden>true</hidden>
-  <content>{{velocity output="false"}}
-$services.localization.use('document', 'RFCCode.RFCTranslations')
-{{/velocity}}
+// It's assumed that Jenkins has been configured to implicitly load the vars/xwikiModule.groovy library which exposes
+// the "xwikiModule" global function/DSL.
+// Note that the version used is the one defined in Jenkins but it can be overridden as follows:
+// @Library("XWiki@<branch, tag, sha1>") _
+// See https://github.com/jenkinsci/workflow-cps-global-lib-plugin for details.
 
-{{include reference="XWiki.LiveTableResults" /}}</content>
-</xwikidoc>
+// The standard pipeline (build, quality checks, integration and Docker tests) needs no customization here.
+xwikiModule {
+}
